@@ -13,16 +13,22 @@ $font: (
 $color: (
   text: (
     base: #333,
+    light: #555,
   ),
   white: (
     base: #fff,
   ),
   black: (
     base: #000,
+    light:#ccc,
   ),
   green: (
     base: #0ba25e,
     dark: #1a8a58,
+  ),
+  yellow: (
+    base: #F1C40E,
+    dark: #E2B400,
   ),
 );
 
@@ -31,4 +37,7 @@ $color: (
 //! SIZE
 $size: (
   body: 16,
+  h2: 16,
+  h3: 22,
+  h1: 44,
 );

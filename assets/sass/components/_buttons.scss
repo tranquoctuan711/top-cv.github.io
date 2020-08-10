@@ -3,16 +3,21 @@ $btn--color: (
     base: getColor(green, base),
     hover: getColor(green, dark),
   ),
+  yellow: (
+    base: getColor(yellow, base),
+    hover: getColor(yellow, dark),
+  ),
 );
 
 .btn {
   cursor: pointer;
-
+  
   display: inline-block;
   padding: 6px 12px;
   border: 1px solid transparent;
 
-  @include setFont($text-align: "center");
+  @include setFont();
+  text-align: center;
   white-space: nowrap;
   line-height: 1.5;
   border-radius: 0.25rem;

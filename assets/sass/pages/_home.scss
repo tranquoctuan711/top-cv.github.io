@@ -16,3 +16,45 @@
     display: none;
   }
 }
+
+//! Banner -------------------------------------------------------
+.banner {
+  //? banner__heading
+  &__heading {
+    h1 {
+      text-transform: uppercase;
+      @include setFont($colorName: green, $font-weight: "bold", $font-size: h1);
+    }
+    h3 {
+      text-transform: uppercase;
+      font-style: italic;
+      @include setFont($colorName: green, $font-weight: 600, $font-size: h3);
+    }
+    p {
+      font-weight: bold;
+    }
+
+    .btn-custom {
+      text-transform: uppercase;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-right: 20px;
+      padding: 10px 20px 10px;
+      width: 200px;
+      @include setFont($font-weight: "bold", $colorName: white);
+    }
+    
+
+  }
+
+  //? banner__img
+  &__img {
+    max-width: 80%;
+  }
+
+  #search-box {
+    h2{
+      @include setFont($font-size:h2, $font-weight: "bold",$colorName: green);
+    }
+  }
+}

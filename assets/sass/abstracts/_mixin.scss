@@ -1,10 +1,9 @@
 @mixin setFont(
   $font-family: base,
-  $font-size: "body",
+  $font-size: body,
   $font-weight: "normal",
   $colorName: text,
   $colorStyle: base,
-  $text-align: "initial"
 ) {
   font: {
     family: getFontFamily($font-family);
@@ -13,7 +12,6 @@
   }
 
   color: getColor($colorName, $colorStyle);
-  text-align: $text-align;
 }
 
 @mixin flexBox(
