@@ -1,0 +1,42 @@
+@mixin setFont(
+  $font-family: base,
+  $font-size: "body",
+  $font-weight: "normal",
+  $colorName: text,
+  $colorStyle: base,
+  $text-align: "initial"
+) {
+  font: {
+    family: getFontFamily($font-family);
+    size: getFontSize($font-size);
+    weight: $font-weight;
+  }
+
+  color: getColor($colorName, $colorStyle);
+  text-align: $text-align;
+}
+
+@mixin flexBox(
+  $flex-direction: "initial",
+  $flex-wrap: "wrap",
+  $justify-content: "center",
+  $align-items: "center"
+) {
+  display: flex;
+  flex-wrap: $flex-wrap;
+  flex-direction: $flex-direction;
+
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin square($size, $circle: false) {
+  width: $size;
+  height: $size;
+
+  @if ($circle == true) {
+    border-radius: 50%;
+  } @else {
+    border-radius: $size / 10;
+  }
+}

@@ -1,0 +1,19 @@
+// Map deep get
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+@function getFontFamily($fontName) {
+  @return map-get($map: $font, $key: $fontName);
+}
+
+@function getFontSize($sizeName) {
+  @return (map-get($map: $size, $key: $sizeName) / 10) * 1rem;
+}
+
+@function getColor($colorName, $colorStyle) {
+  @return map-deep-get($color, $colorName, $colorStyle);
+}
